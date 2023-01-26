@@ -26,8 +26,11 @@ function saveUsers(){
     localStorage.setItem('user', JSON.stringify(loginInfo));
   }
 
-  function addUer(){
-    
+  //function to add user and password to local storage.
+  function addUser(user,password){
+
+    saveUsers();
+
   }
 
 
