@@ -26,6 +26,10 @@ function saveUsers(){
     localStorage.setItem('user', JSON.stringify(loginInfo));
   }
 
+  function addUer(){
+    
+  }
+
 
 //function where we sign up the users.
 function signup(){
@@ -54,7 +58,7 @@ function signup(){
         }
         //adding user to local storage.
         else{
-
+            addUser();
         }
     }
 }
