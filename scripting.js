@@ -28,9 +28,10 @@ function saveUsers(){
 
   //function to add user and password to local storage.
   function addUser(user,password){
-
+    //adding new user name in array.
+    loginInfo.push({user:user,password:password});
+    //updating local storage
     saveUsers();
-
   }
 
 
@@ -61,7 +62,9 @@ function signup(){
         }
         //adding user to local storage.
         else{
-            addUser();
+            let user = document.getElementById('user').value;
+            let pass = document.getElementById('password').value;
+            addUser(user,pass);
         }
     }
 }
