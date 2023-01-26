@@ -32,13 +32,15 @@ function saveUsers(){
     loginInfo.push({user:user,password:password});
     //updating local storage
     saveUsers();
+    
+    alert("Sign up complete.");
   }
 
 
 //function where we sign up the users.
 function signup(){
     //input validation.
-    if(document.getElementById('user').value ===""){
+    if(document.getElementById('user').value === ""){
         alert("Username field is empty");
     }
     else if(document.getElementById('password').value === ""){
