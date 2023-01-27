@@ -36,7 +36,6 @@ function saveUsers(){
     alert("Sign up complete.");
   }
 
-
 //function where we sign up the users.
 function signup(){
     //input validation.
