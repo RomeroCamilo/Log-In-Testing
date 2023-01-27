@@ -8,7 +8,7 @@ const savedStorage = JSON.parse(localStorage.getItem('user'));
 if(Array.isArray(savedStorage)){
    loginInfo = savedStorage;
 }
-//if local storage is empty, create a new array.
+//if local storage is empty, create a new array. test
 else{
     //making an object of users.
      loginInfo = [
