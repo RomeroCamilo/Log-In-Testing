@@ -32,9 +32,22 @@ function addUser(user,password){
     loginInfo.push({user:user,password:password});
     //updating local storage
     saveUsers();
-    
-    alert("Sign up complete.");
   }
+
+//validating if user already exists or not
+function checkExistence(user){
+
+    let doesNotExist = true;
+
+    //checking if current user input for sign up already exists.
+    loginInfo.forEach(function (value){
+        if(value.user === user){
+            doesNotExist = false;
+        }
+    })
+
+    return doesNotExist;
+}
 
 //function where we sign up the users.
 function signup(){
@@ -46,29 +59,24 @@ function signup(){
         alert("Password field is empty");
     }
     //if fields are filled in.
-    else{   
-        let doesNotExist = true;     
-       
-        //checking if username already exists in our array object of users.
-        loginInfo.every(element => {
-                //checking if textbok user already exists when trying to sign up.
-            if(element.user === document.getElementById('user').value){
-                //if it exists, set doesNotExist to false since it DOES exist.
-                doesNotExist = false;
-            }
-        });
+    else{ 
+        //will return true or false.
+        let doesNotExist = checkExistence(document.getElementById('user').value);
+
+        console.log(doesNotExist);
         
         //no user will be added since username already exists.
         if(doesNotExist === false){
-            alert("Username already exists")
+            alert("Username already exists...")
         }
-        //adding user to local storage.
+        //adding user to local storage if username does not already exist.
         else{
             let user = document.getElementById('user').value;
             let pass = document.getElementById('password').value;
             addUser(user,pass);
+            alert("Sign up complete.");
         }
-    }
+    }  
 }
 
 
