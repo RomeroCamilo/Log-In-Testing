@@ -26,8 +26,8 @@ function saveUsers(){
     localStorage.setItem('user', JSON.stringify(loginInfo));
   }
 
-  //function to add user and password to local storage.
-  function addUser(user,password){
+//function to add user and password to local storage.
+function addUser(user,password){
     //adding new user name in array.
     loginInfo.push({user:user,password:password});
     //updating local storage
@@ -51,9 +51,10 @@ function signup(){
        
         //checking if username already exists in our array object of users.
         loginInfo.every(element => {
+                //checking if textbok user already exists when trying to sign up.
             if(element.user === document.getElementById('user').value){
+                //if it exists, set doesNotExist to false since it DOES exist.
                 doesNotExist = false;
-                //return false;
             }
         });
         
