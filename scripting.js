@@ -79,6 +79,51 @@ function signup(){
     }  
 }
 
+//function that will be used to check whether a login is valid or not.
+function validateLogin(user,pass){
+
+    let valid = false;
+
+    loginInfo.forEach(function(info){
+
+        //if we found a matching user and pass in the login info data (loginInfo object array) stored.
+        if(info.user === user && info.password === pass){
+            valid = true;
+        }
+    })
+
+    return valid;
+}
+
+
+
+//function to log in.
+function login(){
+    //input validation.
+    if(document.getElementById('user').value === ""){
+        alert("Username field is empty");
+    }
+    else if(document.getElementById('password').value === ""){
+        alert("Password field is empty");
+    }
+    //if fields are filled in.
+    else{
+
+        let user = document.getElementById('user').value;
+        let pass = document.getElementById('password').value;
+        
+        //checking whether the login creditionals are a valid pair.
+        let validLogin = validateLogin(user,pass);
+
+        if(validLogin === false){
+            alert("Invalid creditionals. Try again")
+        }
+        else{
+            alert("Succesfully logged in!")
+        }
+    }
+}
+
 
 
 
