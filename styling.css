@@ -6,3 +6,22 @@ body{
     margin-bottom:10px;
     display:block;
 }
+
+.loginStyle{
+    cursor:pointer;
+    background-color: orange;
+    color:white;
+    padding:5px;
+    border-style: none;
+    font-size: 15px;
+    
+}
+
+.logoutStyle{
+    cursor:pointer;
+    background-color: orangered;
+    color:white;
+    padding:5px;
+    border-style: none;
+    font-size: 15px;
+}

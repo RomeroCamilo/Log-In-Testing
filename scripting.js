@@ -85,7 +85,7 @@ function validateLogin(user,pass){
     let valid = false;
 
     loginInfo.forEach(function(info){
-        //if we found a matching user and pass in the login info data (loginInfo object array) stored.
+        //if we found a matching user and pass in the login info data (loginInfo object array) stored, return immediatly from the loop.
         if(info.user === user && info.password === pass){
             return valid = true;
         }
