@@ -1,5 +1,5 @@
 body{
-    background-color: crimson;
+    background-color: white
 }
 
 .stack{
@@ -7,21 +7,36 @@ body{
     display:block;
 }
 
-.loginStyle{
-    cursor:pointer;
-    background-color: orange;
-    color:white;
-    padding:5px;
-    border-style: none;
-    font-size: 15px;
-    
+.title{
+    color:black
 }
 
-.logoutStyle{
+.loginStyle{
     cursor:pointer;
-    background-color: orangered;
+    background-color: black;
     color:white;
     padding:5px;
     border-style: none;
     font-size: 15px;
+    font-weight: bold;
+    transition: opacity 0.1s;
+}
+
+.loginStyle:hover{
+    opacity:.5;
+}
+
+.signupStyle{
+    cursor:pointer;
+    background-color: black;
+    color:white;
+    padding:5px;
+    border-style: none;
+    font-size: 15px;
+    font-weight: bold;
+    transition: opacity 0.1s;
+}
+
+.signupStyle:hover{
+    opacity:.5;
 }
