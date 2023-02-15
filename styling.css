@@ -14,6 +14,11 @@ body{
 
 }
 
+label{
+    color:white;
+    font-size: 18px;
+}
+
 .textboxStyle{
     margin:15px;
     display:block;
